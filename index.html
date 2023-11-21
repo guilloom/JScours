@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="./javascript/vue.js"></script>
+    <title>Mon application vue.js</title>
+</head>
+<body>
+    <div id="app">
+        <h1>Ma première application Vue.js !</h1>
+        <p>cc</p>
+        <button v-on:click="alert('Bonjour')">Cliquez ici</button>
+    </div>
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                datas: [
+                    {label: "message", "data": "Bonjourrrrrrrrr"},
+                    {label: "data1", "data":10},
+                    {label: "data2", "data":20}
+                ],
+            
+            data1: 20,
+            data2: 10,
+            color: "blue"
+        },
+            computed: {
+                total() {
+                    return this.data1+this.data2
+                }
+            },
+            methods: {
+                alert(message){
+                    alert(message)
+                },
+            }
+        })
+        console.log(Vue);
+        console.log(app.datas);
+    </script>
+</body>
+</html>
+
